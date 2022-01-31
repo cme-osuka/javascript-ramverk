@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      class ColorComponent extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { color: "red", fontSize: 16 };
+          this.handleClick = this.handleClick.bind(this);
+        }
+
+        handleClick() {     
+          // color: blue
+          /*if (this.state.color === "red") {
+            this.setState({ color: "blue" });
+          } 
+
+          if (this.state.color === "blue") {
+            this.setState({ color: "red" });
+          }*/
+
+          this.setState({ fontSize: this.state.fontSize + 1 });
+
+          switch(this.state.color) {
+            case "red":
+              this.setState({ color: "green" });
+              break;
+            case "green": 
+              this.setState({ color: "blue" });
+              break;
+            case "blue":
+              this.setState({ color: "red" });
+              break;
+          }
+        }
+
+        render() {
+          return React.createElement(
+            "p",
+            {
+              style: { color: this.state.color, fontSize: this.state.fontSize + "px" },
+              onClick: this.handleClick
+            },
+            "Det här är en text"
+          );
+        }
+      }
+
+      ReactDOM.render(React.createElement(ColorComponent), document.querySelector("#root"))
+
+    </script>
+  </body>
+</html>
