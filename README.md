@@ -7,6 +7,7 @@ I hope you will find this repository useful during this course.
 ## Useful links
 - [React - Getting Started](https://reactjs.org/docs/getting-started.html)
 - [React - CDN Links](https://reactjs.org/docs/cdn-links.html)
+- [React Virtual DOM explained](https://dev.to/swarnaliroy94/introduction-to-react-real-dom-virtual-dom-363)
 
 
 ## Tools I use when I develop
