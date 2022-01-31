@@ -24,7 +24,13 @@
         }
 
         handleClick() {     
-          // color: blue
+
+          // Vi vill ändra statet genom att kalla på setState() istället för
+          // exempelvis skriva över eller sätta state-värden med
+          // this.state.color = "red"
+          // Eftersom this.state.color = "red" inte garanterar att
+          // React har koll på vad som ska uppdateras
+
           /*if (this.state.color === "red") {
             this.setState({ color: "blue" });
           } 
