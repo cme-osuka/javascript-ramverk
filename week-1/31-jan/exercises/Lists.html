@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const NAMES = ["Alice", "Joakim", "Macke", "Eve", "Bob"];
+
+      /*const elements = [];
+
+      for (let name of NAMES) {
+        elements.push(
+          React.createElement("li", {}, name)
+        );
+      }*/
+
+      function createListItem(str) {
+        return React.createElement("li", { key: str }, str)
+      }
+
+      class Lists extends React.Component {
+        render() {
+          return React.createElement("ul", {}, NAMES.map(createListItem)) // => [<li>, <li>, <li>]
+        }
+      }
+
+      ReactDOM.render(
+        React.createElement(Lists),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>

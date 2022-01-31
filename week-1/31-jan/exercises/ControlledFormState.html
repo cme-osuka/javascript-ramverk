@@ -34,9 +34,9 @@
             onChange: this.handleChange,
           });
 
-          const text = React.createElement("p", {}, "Text");
+          const text = React.createElement("p", {}, `Hello, ${this.state.text}`);
 
-          return React.createElement(React.Fragment, {}, input, text)
+          return React.createElement("div", {}, input, text) // <div> <input /> <p></p> </div>
         }
       }
 
