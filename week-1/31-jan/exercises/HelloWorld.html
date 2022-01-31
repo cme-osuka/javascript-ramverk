@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Min första React app</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+
+    <script>
+
+      class MyHelloWorldComponent extends React.Component {
+        render() {
+          // <p>Hello World</p>
+        
+          return React.createElement("p", { 
+            style: { color: "red", padding: "16px", backgroundColor: "orange", alignText: "center" },
+            onClick: () => console.log("Klickad på!"),
+            className: "red-text"
+          }, "Hello World");
+        }
+      }
+
+      ReactDOM.render(React.createElement(MyHelloWorldComponent), document.querySelector("#root"))
+
+    </script>
+  </body>
+</html>

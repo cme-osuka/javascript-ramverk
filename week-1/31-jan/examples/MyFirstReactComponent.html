@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+
+  <div id="target"></div>
+
+  <script>
+    class MyFirstReactComponent extends React.Component {
+      render() {
+        return React.createElement("p", {}, "Detta är en text")
+      }
+    }
+
+    
+
+    ReactDOM.render(React.createElement(MyFirstReactComponent), document.querySelector("#target"))
+
+  </script>
+</body>
+</html>
