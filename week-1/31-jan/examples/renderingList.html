@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Hello World in React</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <div id="target"></div>
+
+    <style>
+      body {
+      }
+    </style>
+
+    <script>
+      const NAMES = ['Alice', 'Bob', 'Eve', 'Mallory', 'Trent'];
+
+      function createListItem(str) {
+        return React.createElement('li', { key: str }, str);
+      }
+
+      class List extends React.Component {
+        render() {
+          return React.createElement(
+            'ul',
+            {},
+            NAMES.map(createListItem),
+          );
+        }
+      }
+
+      ReactDOM.render(
+        React.createElement(List),
+        document.getElementById('target'),
+      );
+    </script>
+  </head>
+</html>
