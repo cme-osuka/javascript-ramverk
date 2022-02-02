@@ -16,7 +16,7 @@
     <div id="target"></div>
 
     <script>
-      var country_list = [
+      const countryList = [
         "Afghanistan",
         "Albania",
         "Algeria",
@@ -243,7 +243,7 @@
         }
 
         render() {
-          const filteredList = country_list.filter(country => {
+          const filteredList = countryList.filter(country => {
             const lowercaseCountry = country.toLowerCase();
             const lowercaseFilter = this.state.filter.toLowerCase();
 
