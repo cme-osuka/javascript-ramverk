@@ -5,10 +5,14 @@ This repository is meant for CME students to access exercises and codealongs tha
 I hope you will find this repository useful during this course.
 
 ## Useful links
+### React related
 - [React - Getting Started](https://reactjs.org/docs/getting-started.html)
 - [React - CDN Links](https://reactjs.org/docs/cdn-links.html)
 - [React Virtual DOM explained](https://dev.to/swarnaliroy94/introduction-to-react-real-dom-virtual-dom-363)
-
+- [Scrimba - Free courses](https://scrimba.com/allcourses?price=free) - Great interactive code/screencasts with code/video. 
+- 
+### Inspiration & New things
+- [Fireship](https://www.youtube.com/c/Fireship) - Youtube channel with short and sweet videos on many different topics
 
 ## Tools I use when I develop
 
