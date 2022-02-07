@@ -18,6 +18,7 @@ function NewsList(props) {
             title={newsItem.title}
             image={newsItem.image}
             description={newsItem.description}
+            author={newsItem.author}
           />
         );
       })}
