@@ -10,9 +10,11 @@ I hope you will find this repository useful during this course.
 - [React - CDN Links](https://reactjs.org/docs/cdn-links.html)
 - [React Virtual DOM explained](https://dev.to/swarnaliroy94/introduction-to-react-real-dom-virtual-dom-363)
 - [Scrimba - Free courses](https://scrimba.com/allcourses?price=free) - Great interactive code/screencasts with code/video. 
-- 
+- [Props cheatsheet](https://www.freecodecamp.org/news/react-props-cheatsheet/) - Olika sätt att skriva props
 ### Inspiration & New things
 - [Fireship](https://www.youtube.com/c/Fireship) - Youtube channel with short and sweet videos on many different topics
+
+
 
 ## Tools I use when I develop
 
