@@ -12,9 +12,10 @@ const mainStyles = {
 function NewsList(props) {
   return (
     <main style={mainStyles}>
-      {props.data.map((newsItem) => {
+      {props.data.map((newsItem, i) => {
         return (
           <NewsItem
+            key={`${newsItem.title}_${i}`}
             title={newsItem.title}
             image={newsItem.image}
             description={newsItem.description}
