@@ -12,7 +12,7 @@ function InputBox(props) {
   return (
     <div className={styles.container}>
       <input className={styles.input} type="text" onChange={handleChange} value={name} />
-      <button className={styles.button} onClick={() => props.add(name)}>Lägg till</button>
+      <button className={styles.button} onClick={() => props.add(name)}>Add</button>
     </div>
   );
 }
