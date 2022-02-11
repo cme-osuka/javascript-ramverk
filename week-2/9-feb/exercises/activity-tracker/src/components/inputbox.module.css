@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+}
+
+.input {
+  border: 5px solid #431AF5;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 4px 16px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button {
+  margin-left: 8px;
+  background: #431AF5;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 4px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.button:hover {
+  background: #431AF5cc;
+}
+
+.button:active {
+  background: #4d27f9;
+
+}

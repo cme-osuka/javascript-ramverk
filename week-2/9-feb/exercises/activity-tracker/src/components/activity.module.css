@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  border: 5px solid #431af5;
+  padding: 8px 12px;
+  justify-content: space-between;
+  box-shadow: 5px 5px #431af590;
+  margin-top: 16px;
+  animation: animate-in 150ms linear;
+  position: relative;
+}
+
+.name {
+  background: #431AF5;
+  display: flex;
+  align-items: center;
+  margin: 3px 12px 3px 0;
+  padding: 32px;
+}
+
+.daysContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 500px;
+}
+
+.day {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #431AF5;
+  font-weight: 700;
+  margin: 3px;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.completedDay {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #431AF5;
+  font-weight: 700;
+  margin: 3px;
+  cursor: pointer;
+  transition: all 200ms;
+  background: #431AF5;
+}
+
+.day:hover {
+  background: #431AF5;
+}
+
+.removeButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 24px;
+  width: 24px; 
+  background: #431AF5;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.removeButton:hover {
+  cursor: pointer;
+  background: #431AF590;
+}
+
+@keyframes animate-in {
+  from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;	
+	}
+}

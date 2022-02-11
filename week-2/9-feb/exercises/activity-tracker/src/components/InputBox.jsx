@@ -1,19 +1,20 @@
-import React from 'react'
+import React, { useState } from "react";
+import styles from "./inputbox.module.css";
 
 function InputBox(props) {
+  const [name, setName] = useState("");
 
   function handleChange(event) {
     const value = event.target.value;
-    props.setInputText(value);
+    setName(value);
   }
 
   return (
-    <div>
-      <p>{props.inputText}</p>
-      <input type="text" onChange={handleChange} value={props.inputText} />
-      <button onClick={props.createActivity}>Lägg till</button>
+    <div className={styles.container}>
+      <input className={styles.input} type="text" onChange={handleChange} value={name} />
+      <button className={styles.button} onClick={() => props.add(name)}>Lägg till</button>
     </div>
-  )
+  );
 }
 
-export default InputBox
+export default InputBox;
