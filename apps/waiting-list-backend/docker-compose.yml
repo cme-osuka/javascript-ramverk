@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  waitinglist-backend:
+    container_name: waitinglist-backend
+    image: waitinglist-backend
+    labels:
+      - traefik.http.routers.skyofficeServer.rule=Host(`waitinglist.osuka.dev`)
+      - traefik.http.routers.skyofficeServer.tls=true
+      - traefik.http.routers.skyofficeServer.tls.certresolver=lets-encrypt
+      - traefik.port=8000
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "8000:8000"
