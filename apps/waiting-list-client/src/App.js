@@ -9,14 +9,14 @@ function App() {
   const [list, setList] = useState([]);
   const socket = useRef();
   // Timestamp: Indikation på hur längesen någon bad om hjälp
-  // Math.random för random färg
+  // ✅ Math.random för random färg
   // Kevins MP3-ljud
-  // Namn, Breakout room (optional)
+  // ✅ Namn, Breakout room (optional)
   // Ändra favicon/title om listan är tom eller inte
   // Wishlist: Notifikation
 
   useEffect(() => {
-    socket.current = io("http://localhost:8001");
+    socket.current = io("https://waitinglist.osuka.dev");
 
     socket.current.on("connect", () => {
       console.log("Connected");
@@ -36,7 +36,6 @@ function App() {
 
   function raiseHand(name, room) {
     socket.current.emit("help", {
-      timestamp: ".",
       name: name,
       room: room,
       color: getRandomColor()
