@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import { useRecoilState } from "recoil";
+import { authState } from "../recoil/auth/atom"
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [token, setToken] = useRecoilState(authState);
+  const navigate = useNavigate();
+
 
   async function getToken() {
     const result = await fetch("https://tangible-glaze-bonnet.glitch.me/login", {
@@ -22,9 +28,8 @@ function Login() {
     }
     
     const json = await result.json();
-    console.log(json);
-
-
+    setToken(json.accessToken);
+    navigate("/");
   }
 
 
