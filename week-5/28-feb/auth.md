@@ -153,13 +153,22 @@ https://cme-blog.osuka.dev/uploads/1o39u24u24.jpg
 ## Skapa en post
 
 ```
-const res = await axios.post("https://cme-blog.osuka.dev/api/posts", {
-	data: {
-		title: "Test",
-		content: "Innehåll",
-		author: "Oscar"
-	}
-});
+const result = await axios.post(
+    "https://cme-blog.osuka.dev/api/posts",
+    {
+      data: {
+        title: "Ny post",
+        content: "Detta är vår nya posts content",
+        author: "Oscar",
+      },
+    },
+    {
+      headers: {
+        Authorization:
+          "Bearer <DIN TOKEN>",
+      },
+    }
+  );
 ```
 
 ### Exempel-respons:
