@@ -14,7 +14,6 @@ med följande **body**:
 ```
 
 **respons**
-Den svarar sedan med ett objekt som innehåller din **Token**
 
 ```
 {
