@@ -22,7 +22,7 @@ const reallyExpensiveSquare = (number) => {
 function MemoExercise() {
   const [v, setV] = useState(1);
   const [k, setK] = useState(2);
-  const vSquared = useMemo(() => reallyExpensiveSquare(v), [v]);
+  const vSquared = reallyExpensiveSquare(v)
   return (
     <>
       <input value={v} onChange={(e) => setV(e.target.value)} />
