@@ -1,5 +1,7 @@
 # Next.js
 
+## Exempel-repot hittar du här:
+[cme-osuka/my-first-next-app](https://github.com/cme-osuka/my-first-next-app)
 ## Länkar
 Deras webbplats och dokumentation innehåller mycket nyttigt för de som vill fördjupa sig i Next.js!  
 [Next.js webbplats](https://nextjs.org/)
@@ -19,6 +21,9 @@ Så i denna genomgången kommer vi titta på hur vi kommer igång med Next.js, S
 Precis som till mycket annat, finns det även ett CLI-verktyg som ger oss en uppsättning kod att komma igång med. Vi kommer lättast igång genom att köra:
 ```
 npx create-next-app [NAMN]
+// De har nyligen ändrat till att använda YARN istället för NPM. 
+// Har du inte Yarn installerat, behöver du köra:
+npx create-next-app [NAMN] --use-npm
 ```
 När det är klart navigerar vi in i projektet och startar dev-servern:
 ```
@@ -65,8 +70,8 @@ export async function getStaticPaths() {
 
   // Våra paths kommer sedan se ut såhär:
   // [
-  //   { params: { product: 'pink-tshirt' } },
-  //   { params: { product: 'orange-tshirt'} }
+  //   { params: { productName: 'pink-tshirt' } },
+  //   { params: { productName: 'orange-tshirt'} }
   //   ... 
   // ]
   return { paths, fallback: false }
@@ -85,7 +90,7 @@ Dessa ger vi sedan till vår React-sida. I vårt fall vill vi ge den information
 // Också inuti [productName].js
 export async function getStaticProps({ params }) {
   // hämta data om EN av våra produkter
-  const product = products.find(product => product.name === params.product)
+  const product = products.find(product => product.name === params.productName)
   // och returnera den i lämpligt format
   return { props: { product } } 
   // { product } är samma sak som att skriva { product: product }
