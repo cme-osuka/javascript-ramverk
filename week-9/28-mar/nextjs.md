@@ -29,10 +29,10 @@ npm run dev
 Skapa sedan en mapp i projektet du kallar `data` med en fil med namnet `products.json` inuti.
 ```
 [
-  { name: "pink-shirt", description: "En beskrivning på vår rosa tröja" },
-  { name: "orange-tshirt", description: "En beskrivning på vår orange tröja" },
-  { name: "red-tshirt", description: "En beskrivning på vår röda tröja" },
-  { name: "black-tshirt", description: "En beskrivning på vår svarta tröja" },
+  { "name": "pink-shirt", "description": "En beskrivning på vår rosa tröja" },
+  { "name": "orange-tshirt", "description": "En beskrivning på vår orange tröja" },
+  { "name": "red-tshirt", "description": "En beskrivning på vår röda tröja" },
+  { "name": "black-tshirt", "description": "En beskrivning på vår svarta tröja" }
 ]
 ```
 
