@@ -9,7 +9,7 @@ Det kan du se om du kikar på våra dependencies i `package.json`.
 
 Anledningen till att vi behöver Jest är för att RTL ger oss bara metoder för att skriva test-script, vi behöver fortfarande ett ramverk som kör test-koden - exempelvis Mocha, Jasmine eller Jest i detta fallet. Jest eftersom det funkar bra med både Rect och RTL.
 
-```
+```js
 npm install --save-dev @testing-library/react @testing-library/jest-dom
 
 // --save-dev gör att vi sparar dessa under våra dev dependencies, så de inte följer med när vi bygger produktionsversionen av applikationen
@@ -18,7 +18,7 @@ npm install --save-dev @testing-library/react @testing-library/jest-dom
 ## När applikationen är skapad
 Har du startat en CRA-app så borde du se att de redan har genererat en App.test.js inuti vår `src/`-mapp. Den ser ut på detta viset:
 
-```
+```js
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
@@ -33,7 +33,7 @@ Testkoden ovan använder RTL's `render`-metod för att virtuellt rendera `App`-k
 
 För att se resultatet av vår rendering och innehållet i `screen` har den en inbyggd metod vi kan använda, `screen.debug()`.
 
-```
+```js
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
@@ -49,7 +49,7 @@ test('renders learn react link', () => {
 
 Slutligen testar koden om link-elementet finns inuti vårt `document`-objekt eller inte, med `expect`-metoden från **Jest**.
 
-```
+```js
 expect(linkElement).toBeInTheDocument();
 ```
 
@@ -68,7 +68,7 @@ De flesta testfallen du kommer skriva borde använda metoder för att hitta elem
 
 Och när dessa metoder inte är tillräckligt, finns det även en `getByTestId()`-metod som låter dig hitta ett element baserat på dess `data-testid`-attributvärde:
 
-```
+```js
 import { render, screen } from '@testing-library/react';
 
 render(<div data-testid="custom-element" />);
@@ -84,7 +84,7 @@ Bortsett från att hitta element i vår `document.body`, ger oss RTL ett sätt a
 
 Deras `user-event`-library är ett bra tilläggsbibliotek till RTL som hjälper dig simulera användar-interaktioner. Anta att du har en knapp som växlar mellan Light och Dark-tema till exempel:
 
-```
+```js
 import React, { useState } from "react";
 
 function App() {
@@ -107,7 +107,7 @@ Efter det skapar du ett test som htitar knappen och simulerar ett knapptryck med
 
 `getByText` och `toHaveTextContent` i detta fallet använder RegEx för att söka och matcha en text-sträng. Vill du lära dig mer om det rekommenderar jag att du kollar in `https://regexone.com/` och dess tutorial. Den guidar dig från start till mästare i RegEx.
 
-```
+```js
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
